@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="utf-8">
+    <title>details</title>
+    <meta name="description" content="details">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="scripts/modules/swiper.min.css">
+    <link rel="stylesheet" href="scripts/modules/select2.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css">
+  <link href="content/css/main.css" rel="stylesheet"></head>
+  <body class="main">
+    <!--include ../includes/modules/header-->
+    <header class="header">
+      <div class="header__body">
+        <button class="burger burger--blue js-open-menu" tabindex="0" aria-expanded="false" aria-controls="nav-menu">
+          <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" viewBox="0 0 416.66 347.22">
+            <g id="_1905079872">
+              <path class="fil0" d="M395.38 10.3c11.75,0 21.28,9.53 21.28,21.28 0,11.75 -9.53,21.28 -21.28,21.28l-374.1 0c-11.75,0 -21.28,-9.53 -21.28,-21.28 0,-11.75 9.53,-21.28 21.28,-21.28l374.1 0z"></path>
+              <path class="fil0" d="M395.38 166.37c11.75,0 21.28,9.53 21.28,21.28 0,11.75 -9.53,21.28 -21.28,21.28l-374.1 0c-11.75,0 -21.28,-9.53 -21.28,-21.28 0,-11.75 9.53,-21.28 21.28,-21.28l374.1 0z"></path>
+              <path class="fil0" d="M395.38 308.25c11.75,0 21.28,9.53 21.28,21.28 0,11.75 -9.53,21.28 -21.28,21.28l-374.1 0c-11.75,0 -21.28,-9.53 -21.28,-21.28 0,-11.75 9.53,-21.28 21.28,-21.28l374.1 0z"></path>
+            </g>
+          </svg>
+        </button><a class="logo logo--header" tabindex="0" aria-label="קישור לדף הבית"><img src="content/images/icons/logo.svg" width="200" height="88" alt="logo"></a>
+        <nav class="header__menu" aria-label="general navigation">
+          <ul class="header__menu-ul" role="list">
+            <li class="header__menu-li js-open-submenu" role="listitem" tabindex="0" aria-haspopup="listbox" aria-expanded="false" aria-label="מידע לנוסע">
+              <div class="link link--top is-current"><span class="link__text">מידע לנוסע</span></div>
+              <ul class="sub-menu" aria-activedescendant role="list">
+                <li class="sub-menu__li"><a class="link link--white-simple js-submenu-link" href="#" tabindex="-1" id="list0" aria-label="תכנון נסיעה ">
+                    <div class="link__text">תכנון נסיעה </div></a></li>
+                <li class="sub-menu__li"><a class="link link--white-simple js-submenu-link" href="#" tabindex="-1" id="list1" aria-label="לוחות זמנים ומסלולים">
+                    <div class="link__text">לוחות זמנים ומסלולים</div></a></li>
+                <li class="sub-menu__li"><a class="link link--white-simple js-submenu-link" href="#" tabindex="-1" id="list2" aria-label="עדכוני תנועה">
+                    <div class="link__text">עדכוני תנועה</div></a></li>
+                <li class="sub-menu__li"><a class="link link--white-simple js-submenu-link" href="#" tabindex="-1" id="list3" aria-label="תעריפים וכרטיסים">
+                    <div class="link__text">תעריפים וכרטיסים</div></a></li>
+                <li class="sub-menu__li"><a class="link link--white-simple js-submenu-link" href="#" tabindex="-1" id="list4" aria-label="הזמנת מקומות">
+                    <div class="link__text">הזמנת מקומות</div></a></li>
+                <li class="sub-menu__li"><a class="link link--white-simple js-submenu-link" href="#" tabindex="-1" id="list5" aria-label="שאלות ותשובות">
+                    <div class="link__text">שאלות ותשובות</div></a></li>
+                <li class="sub-menu__li"><a class="link link--white-simple js-submenu-link" href="#" tabindex="-1" id="list6" aria-label="תשלומים באתר">
+                    <div class="link__text">תשלומים באתר</div></a></li>
+                <li class="sub-menu__li"><a class="link link--white-simple js-submenu-link" href="#" tabindex="-1" id="list7" aria-label="מחלקת שירות לקוחות">
+                    <div class="link__text">מחלקת שירות לקוחות</div></a></li>
+                <li class="sub-menu__li"><a class="link link--white-simple js-submenu-link" href="#" tabindex="-1" id="list8" aria-label="אבידות ומציאות">
+                    <div class="link__text">אבידות ומציאות</div></a></li>
+                <li class="sub-menu__li"><a class="link link--white-simple js-submenu-link" href="#" tabindex="-1" id="list9" aria-label="הזמנת נסיעה בעמק האלה">
+                    <div class="link__text">הזמנת נסיעה בעמק האלה</div></a></li>
+              </ul>
+            </li>
+            <li class="header__menu-li js-open-submenu" role="listitem" tabindex="0" aria-haspopup="listbox" aria-expanded="false" aria-label="רב קו">
+              <div class="link link--top is-current"><span class="link__text">רב קו</span></div>
+              <ul class="sub-menu" aria-activedescendant role="list">
+                <li class="sub-menu__li"><a class="link link--white-simple js-submenu-link" href="#" tabindex="-1" id="list0" aria-label="עמדות על - הקו">
+                    <div class="link__text">עמדות על - הקו</div></a></li>
+                <li class="sub-menu__li"><a class="link link--white-simple js-submenu-link" href="#" tabindex="-1" id="list1" aria-label="עמדות טעינת כרטיסי רב קו">
+                    <div class="link__text">עמדות טעינת כרטיסי רב קו</div></a></li>
+                <li class="sub-menu__li"><a class="link link--white-simple js-submenu-link" href="#" tabindex="-1" id="list2" aria-label="סוגי כרטיסים">
+                    <div class="link__text">סוגי כרטיסים</div></a></li>
+                <li class="sub-menu__li"><a class="link link--white-simple js-submenu-link" href="#" tabindex="-1" id="list3" aria-label="טעינת כרטיסים">
+                    <div class="link__text">טעינת כרטיסים</div></a></li>
+              </ul>
+            </li>
+            <li class="header__menu-li js-open-submenu" role="listitem" tabindex="0" aria-haspopup="listbox" aria-expanded="false" aria-label="קריירה בקווים">
+              <div class="link link--top is-current"><span class="link__text">קריירה בקווים</span></div>
+              <ul class="sub-menu" aria-activedescendant role="list">
+                <li class="sub-menu__li"><a class="link link--white-simple js-submenu-link" href="#" tabindex="-1" id="list0" aria-label="דרושים">
+                    <div class="link__text">דרושים</div></a></li>
+                <li class="sub-menu__li"><a class="link link--white-simple js-submenu-link" href="#" tabindex="-1" id="list1" aria-label="בית ספר לנהיגה">
+                    <div class="link__text">בית ספר לנהיגה</div></a></li>
+                <li class="sub-menu__li"><a class="link link--white-simple js-submenu-link" href="#" tabindex="-1" id="list2" aria-label="מהו התהליך להוצאת רישיון נהיגה לאוטובוס?">
+                    <div class="link__text">מהו התהליך להוצאת רישיון נהיגה לאוטובוס?</div></a></li>
+              </ul>
+            </li>
+            <li class="header__menu-li js-open-submenu" role="listitem" tabindex="0" aria-haspopup="listbox" aria-expanded="false" aria-label="אודות">
+              <div class="link link--top is-current"><span class="link__text">אודות</span></div>
+              <ul class="sub-menu" aria-activedescendant role="list">
+                <li class="sub-menu__li"><a class="link link--white-simple js-submenu-link" href="#" tabindex="-1" id="list0" aria-label="אודות החברה ואזורי פעילות">
+                    <div class="link__text">אודות החברה ואזורי פעילות</div></a></li>
+                <li class="sub-menu__li"><a class="link link--white-simple js-submenu-link" href="#" tabindex="-1" id="list1" aria-label="הסטוריה">
+                    <div class="link__text">הסטוריה</div></a></li>
+                <li class="sub-menu__li"><a class="link link--white-simple js-submenu-link" href="#" tabindex="-1" id="list2" aria-label="קווים בקהילה">
+                    <div class="link__text">קווים בקהילה</div></a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__numbers">
+          <div class="number-block">
+            <div class="number-block__text">מוקד קווים</div><a class="number-block__link" href="tel: 037732060" tabindex="0" aria-label="number 03-7732060">2060*</a>
+            <div class="number-block__text">03-7732060</div>
+          </div>
+          <div class="number-block">
+            <div class="number-block__text">מוקד משרד התחבורה</div><a class="number-block__link" href="tel: 086831610" tabindex="0" aria-label="number 08-6831610">8787*</a>
+            <div class="number-block__text">08-6831610</div>
+          </div>
+        </div>
+      </div>
+      <form class="search-block" method="post" action="/" aria-label="טופס בקשה לחיפוש קווים לפי טקסט חופשי">
+        <input class="search-block__input" name="keySearch" aria-label="שדה טקסטואלי טקסט חופשי" tabindex="0" type="search" aria-autocomplete="searchbox" autocomplete="off" placeholder="חיפוש באתר קווים">
+        <button class="search-block__submit" tabindex="0" aria-label="חיפוש">
+          <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25.99px" height="25.99px" viewBox="0 0 25.99 25.99" enable-background="new 0 0 25.99 25.99" xml:space="preserve">
+            <path d="M19.497,10.56c0-4.934-4-8.934-8.937-8.934c-4.935,0-8.936,4-8.936,8.934c0,4.938,4,8.939,8.936,8.939                            C15.497,19.499,19.497,15.498,19.497,10.56L19.497,10.56z M25.762,25.763L25.762,25.763c-0.3,0.303-0.79,0.303-1.093,0l-7.214-7.213                            c-1.85,1.599-4.256,2.572-6.896,2.572C4.728,21.122,0,16.395,0,10.559C0,4.727,4.728,0,10.56,0c5.833,0,10.563,4.727,10.563,10.559                            c0,2.638-0.974,5.045-2.573,6.897l7.213,7.213C26.066,24.973,26.066,25.463,25.762,25.763z"></path>
+          </svg>
+        </button>
+      </form>
+    </header>
+    <nav class="big-menu js-tabs-wrap" tabindex="-1">
+      <button class="burger burger--white js-close-menu" tabindex="-1" aria-controls="תפריט">
+        <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" viewBox="0 0 305.55 305.55">
+          <g id="_876400848">
+            <path class="fil0" d="M299.35 269.4c8.27,8.27 8.27,21.68 0,29.95 -8.27,8.27 -21.68,8.27 -29.95,0l-263.2 -263.2c-8.27,-8.27 -8.27,-21.68 0,-29.95 8.27,-8.27 21.68,-8.27 29.95,0l263.2 263.2z"></path>
+            <path class="fil0" d="M6.2 269.4c-8.27,8.27 -8.27,21.68 0,29.95 8.27,8.27 21.68,8.27 29.95,0l263.2 -263.2c8.27,-8.27 8.27,-21.68 0,-29.95 -8.27,-8.27 -21.68,-8.27 -29.95,0l-263.2 263.2z"></path>
+          </g>
+        </svg>
+      </button>
+      <ul class="big-menu__list js-accordion" role="list" data-multiple="true">
+        <li class="big-menu__column ac is-active" role="listitem">
+          <h2 class="title title--border ac-trigger">מידע לנוסע</h2>
+          <ul class="menu-column ac-panel" role="list">
+            <li class="menu-column__item" role="listitem"><a class="link link--white-middle" href="#" tabindex="-1" aria-label="תכנון נסיעה">
+                <div class="link__text">תכנון נסיעה</div></a></li>
+            <li class="menu-column__item" role="listitem"><a class="link link--white-middle" href="#" tabindex="-1" aria-label="לוחות זמנים ומסלולים">
+                <div class="link__text">לוחות זמנים ומסלולים</div></a></li>
+            <li class="menu-column__item" role="listitem"><a class="link link--white-middle" href="#" tabindex="-1" aria-label="עדכוני תנועה">
+                <div class="link__text">עדכוני תנועה</div></a></li>
+            <li class="menu-column__item" role="listitem"><a class="link link--white-middle" href="#" tabindex="-1" aria-label="תעריפים וכרטיסים">
+                <div class="link__text">תעריפים וכרטיסים</div></a></li>
+            <li class="menu-column__item" role="listitem"><a class="link link--white-middle" href="#" tabindex="-1" aria-label="הזמנת מקומות">
+                <div class="link__text">הזמנת מקומות</div></a></li>
+            <li class="menu-column__item" role="listitem"><a class="link link--white-middle" href="#" tabindex="-1" aria-label="שאלות ותשובות">
+                <div class="link__text">שאלות ותשובות</div></a></li>
+            <li class="menu-column__item" role="listitem"><a class="link link--white-middle" href="#" tabindex="-1" aria-label="אבדות ומציאות">
+                <div class="link__text">אבדות ומציאות</div></a></li>
+            <li class="menu-column__item" role="listitem"><a class="link link--white-middle" href="#" tabindex="-1" aria-label="הזמנת נסיעה בעמק האלה ">
+                <div class="link__text">הזמנת נסיעה בעמק האלה </div></a></li>
+          </ul>
+        </li>
+        <li class="big-menu__column ac is-active" role="listitem">
+          <h4 class="title title--border ac-trigger">רב קו</h4>
+          <ul class="menu-column ac-panel" role="list">
+            <li class="menu-column__item" role="listitem"><a class="link link--white-middle" href="#" tabindex="-1" aria-label="עמדות על - הקו">
+                <div class="link__text">עמדות על - הקו</div></a></li>
+            <li class="menu-column__item" role="listitem"><a class="link link--white-middle" href="#" tabindex="-1" aria-label="עמדות טעינת כרטיסי רב קו">
+                <div class="link__text">עמדות טעינת כרטיסי רב קו</div></a></li>
+            <li class="menu-column__item" role="listitem"><a class="link link--white-middle" href="#" tabindex="-1" aria-label="סוגי כרטיסים">
+                <div class="link__text">סוגי כרטיסים</div></a></li>
+            <li class="menu-column__item" role="listitem"><a class="link link--white-middle" href="#" tabindex="-1" aria-label="טעינת כרטיסים">
+                <div class="link__text">טעינת כרטיסים</div></a></li>
+          </ul>
+        </li>
+        <li class="big-menu__column ac is-active" role="listitem">
+          <h4 class="title title--border ac-trigger">קריירה בקווים</h4>
+          <ul class="menu-column ac-panel" role="list">
+            <li class="menu-column__item" role="listitem"><a class="link link--white-middle" href="#" tabindex="-1" aria-label="דרושים">
+                <div class="link__text">דרושים</div></a></li>
+            <li class="menu-column__item" role="listitem"><a class="link link--white-middle" href="#" tabindex="-1" aria-label="בית ספר לנהיגה">
+                <div class="link__text">בית ספר לנהיגה</div></a></li>
+            <li class="menu-column__item" role="listitem"><a class="link link--white-middle" href="#" tabindex="-1" aria-label="מהו התהליך להוצאת רישיון נהיגה לאוטובוס? ">
+                <div class="link__text">מהו התהליך להוצאת רישיון נהיגה לאוטובוס? </div></a></li>
+          </ul>
+        </li>
+        <li class="big-menu__column ac is-active" role="listitem">
+          <h4 class="title title--border ac-trigger">אודות</h4>
+          <ul class="menu-column ac-panel" role="list">
+            <li class="menu-column__item" role="listitem"><a class="link link--white-middle" href="#" tabindex="-1" aria-label="אודות החברה ואזורי פעילות">
+                <div class="link__text">אודות החברה ואזורי פעילות</div></a></li>
+            <li class="menu-column__item" role="listitem"><a class="link link--white-middle" href="#" tabindex="-1" aria-label="הסטוריה">
+                <div class="link__text">הסטוריה</div></a></li>
+            <li class="menu-column__item" role="listitem"><a class="link link--white-middle" href="#" tabindex="-1" aria-label="קווים בקהילה">
+                <div class="link__text">קווים בקהילה</div></a></li>
+            <li class="menu-column__item" role="listitem"><a class="link link--white-middle" href="#" tabindex="-1" aria-label="עיתון קווים">
+                <div class="link__text">עיתון קווים</div></a></li>
+          </ul>
+        </li>
+        <li class="big-menu__column ac is-active" role="listitem">
+          <h4 class="title title--border ac-trigger">שירותים נוספים</h4>
+          <ul class="menu-column ac-panel" role="list">
+            <li class="menu-column__item" role="listitem"><a class="link link--white-middle" href="#" tabindex="-1" aria-label="צור קשר">
+                <div class="link__text">צור קשר</div></a></li>
+            <li class="menu-column__item" role="listitem"><a class="link link--white-middle" href="#" tabindex="-1" aria-label="QUICKER ">
+                <div class="link__text">QUICKER </div></a></li>
+            <li class="menu-column__item" role="listitem"><a class="link link--white-middle" href="#" tabindex="-1" aria-label="קווים הסעים">
+                <div class="link__text">קווים הסעים</div></a></li>
+            <li class="menu-column__item" role="listitem"><a class="link link--white-middle" href="#" tabindex="-1" aria-label="זיהום אוויר ודוחות ">
+                <div class="link__text">זיהום אוויר ודוחות </div></a></li>
+            <li class="menu-column__item" role="listitem"><a class="link link--white-middle" href="#" tabindex="-1" aria-label="נגישות">
+                <div class="link__text">נגישות</div></a></li>
+            <li class="menu-column__item" role="listitem"><a class="link link--white-middle" href="#" tabindex="-1" aria-label="תקנון אתר">
+                <div class="link__text">תקנון אתר</div></a></li>
+          </ul>
+        </li>
+        <li class="big-menu__column ac is-active" role="listitem">
+          <h4 class="title title--border ac-trigger">אשכולות פעילות</h4>
+          <ul class="menu-column ac-panel" role="list">
+            <li class="menu-column__item" role="listitem"><a class="link link--white-middle" href="#" tabindex="-1" aria-label="ביתר ועמק האלה">
+                <div class="link__text">ביתר ועמק האלה</div></a>
+              <ul class="menu-column__sub" role="list">
+                <li class="menu-column__sub-li" role="listitem"><a class="link link--white-simple" href="#" tabindex="-1" aria-label="ביתר עילית">
+                    <div class="link__text">ביתר עילית</div></a></li>
+                <li class="menu-column__sub-li" role="listitem"><a class="link link--white-simple" href="#" tabindex="-1" aria-label="עמק האלה">
+                    <div class="link__text">עמק האלה</div></a></li>
+              </ul>
+            </li>
+            <li class="menu-column__item" role="listitem"><a class="link link--white-middle" href="#" tabindex="-1" aria-label="אונו- אלעד">
+                <div class="link__text">אונו- אלעד</div></a>
+              <ul class="menu-column__sub" role="list">
+                <li class="menu-column__sub-li" role="listitem"><a class="link link--white-simple" href="#" tabindex="-1" aria-label="אונו">
+                    <div class="link__text">אונו</div></a></li>
+                <li class="menu-column__sub-li" role="listitem"><a class="link link--white-simple" href="#" tabindex="-1" aria-label="אלעד">
+                    <div class="link__text">אלעד</div></a></li>
+              </ul>
+            </li>
+            <li class="menu-column__item" role="listitem"><a class="link link--white-middle" href="#" tabindex="-1" aria-label="חשמונאים">
+                <div class="link__text">חשמונאים</div></a>
+              <ul class="menu-column__sub" role="list">
+                <li class="menu-column__sub-li" role="listitem"><a class="link link--white-simple" href="#" tabindex="-1" aria-label="מודיעין">
+                    <div class="link__text">מודיעין</div></a></li>
+                <li class="menu-column__sub-li" role="listitem"><a class="link link--white-simple" href="#" tabindex="-1" aria-label="מודיעין עילית ">
+                    <div class="link__text">מודיעין עילית </div></a></li>
+                <li class="menu-column__sub-li" role="listitem"><a class="link link--white-simple" href="#" tabindex="-1" aria-label="לוד">
+                    <div class="link__text">לוד</div></a></li>
+                <li class="menu-column__sub-li" role="listitem"><a class="link link--white-simple" href="#" tabindex="-1" aria-label="רמלה">
+                    <div class="link__text">רמלה</div></a></li>
+              </ul>
+            </li>
+            <li class="menu-column__item" role="listitem"><a class="link link--white-middle" href="#" tabindex="-1" aria-label="נתניה חדרה">
+                <div class="link__text">נתניה חדרה</div></a>
+              <ul class="menu-column__sub" role="list">
+                <li class="menu-column__sub-li" role="listitem"><a class="link link--white-simple" href="#" tabindex="-1" aria-label="חדרה">
+                    <div class="link__text">חדרה</div></a></li>
+                <li class="menu-column__sub-li" role="listitem"><a class="link link--white-simple" href="#" tabindex="-1" aria-label="נתניה">
+                    <div class="link__text">נתניה</div></a></li>
+              </ul>
+            </li>
+            <li class="menu-column__item" role="listitem"><a class="link link--white-middle" href="#" tabindex="-1" aria-label="קווי תלמידים">
+                <div class="link__text">קווי תלמידים</div></a>
+              <ul class="menu-column__sub" role="list">
+                <li class="menu-column__sub-li" role="listitem"><a class="link link--white-simple" href="#" tabindex="-1" aria-label="אונו">
+                    <div class="link__text">אונו</div></a></li>
+                <li class="menu-column__sub-li" role="listitem"><a class="link link--white-simple" href="#" tabindex="-1" aria-label="מודיעין">
+                    <div class="link__text">מודיעין</div></a></li>
+                <li class="menu-column__sub-li" role="listitem"><a class="link link--white-simple" href="#" tabindex="-1" aria-label="ביתר עילית ">
+                    <div class="link__text">ביתר עילית </div></a></li>
+                <li class="menu-column__sub-li" role="listitem"><a class="link link--white-simple" href="#" tabindex="-1" aria-label="מודיעין עילית ">
+                    <div class="link__text">מודיעין עילית </div></a></li>
+                <li class="menu-column__sub-li" role="listitem"><a class="link link--white-simple" href="#" tabindex="-1" aria-label="נתניה">
+                    <div class="link__text">נתניה</div></a></li>
+                <li class="menu-column__sub-li" role="listitem"><a class="link link--white-simple" href="#" tabindex="-1" aria-label="חדרה">
+                    <div class="link__text">חדרה</div></a></li>
+                <li class="menu-column__sub-li" role="listitem"><a class="link link--white-simple" href="#" tabindex="-1" aria-label="רמלה ">
+                    <div class="link__text">רמלה </div></a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <div class="fake-tabindex" tabindex="-1"></div>
+    </nav>
+    <main id="main">
+      <section class="section--top-inner">
+        <div class="animate-svg">
+          <div class="animate-svg__trigger js-inview"></div>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2454 442" width="2454" height="442" preserveAspectRatio="xMidYMid meet" style="width: 100%; height: 100%; transform: translate3d(0px, 0px, 0px);">
+  <defs>
+    <clippath id="__lottie_element_5">
+      <rect width="2454" height="442" x="0" y="0"></rect>
+    </clippath>
+    <clippath id="__lottie_element_7">
+      <path d="M0,0 L2454,0 L2454,442 L0,442z"></path>
+    </clippath>
+  </defs>
+  <g clip-path="url(#__lottie_element_5)">
+    <g clip-path="url(#__lottie_element_7)" transform="matrix(1,0,0,1,0,0)" opacity="1" style="display: block;">
+      <g transform="matrix(1,0,0,1,911,193)" opacity="1" style="display: block;">
+        <g opacity="1" transform="matrix(2,0,0,2,0,0)">
+          <path class="test test--1" stroke-linecap="round" stroke-linejoin="round" fill-opacity="0" stroke="rgb(122,190,147)" stroke-opacity="1" stroke-width="10" d=" M-567.5,16.5 C-567.5,16.5 -382.29998779296875,16.1200008392334 -382.29998779296875,16.1200008392334 C-382.2799987792969,16.1200008392334 -382.2699890136719,16.1200008392334 -382.25,16.1200008392334 C-382.25,16.1200008392334 -9,16.1200008392334 -9,16.1200008392334 C0,16.1200008392334 7.300000190734863,8.8100004196167 7.300000190734863,-0.1899999976158142 C7.300000190734863,-9.199999809265137 14.600000381469727,-16.5 23.610000610351562,-16.5 C23.610000610351562,-16.5 369.8550109863281,-16.5 509.822998046875,-16.5"></path>
+        </g>
+      </g>
+      <g transform="matrix(1,0,0,1,457,245)" opacity="1" style="display: block;">
+        <g opacity="1" transform="matrix(2,0,0,2,0,0)">
+          <path class="test test--2" stroke-linecap="round" stroke-linejoin="round" fill-opacity="0" stroke="rgb(122,171,190)" stroke-opacity="1" stroke-width="10" d=" M-402.5,-52.5 C-402.5,-52.5 -155.91000366210938,-52.5 -155.91000366210938,-52.5 C-155.91000366210938,-52.5 29.81999969482422,-52.5 29.81999969482422,-52.5 C40.86000061035156,-52.5 49.81999969482422,-43.54999923706055 49.81999969482422,-32.5 C49.81999969482422,-32.5 49.81999969482422,32.5 49.81999969482422,32.5 C49.81999969482422,43.54999923706055 58.77000045776367,52.5 69.81999969482422,52.5 C69.81999969482422,52.5 340.6239929199219,52.5 393.5799865722656,52.5"></path>
+        </g>
+      </g>
+      <g transform="matrix(1,0,0,1,685,151.25)" opacity="1" style="display: block;">
+        <g opacity="1" transform="matrix(2,0,0,2,0,0)">
+          <path class="test test--3" stroke-linecap="round" stroke-linejoin="round" fill-opacity="0" stroke="rgb(249,172,56)" stroke-opacity="1" stroke-width="10" d=" M-509.5,59.375 C-509.5,59.375 -269.1000061035156,59.625 -269.1000061035156,59.625 C-269.0899963378906,59.625 -269.0799865722656,59.625 -269.07000732421875,59.625 C-269.07000732421875,59.625 -20.709999084472656,59.625 -20.709999084472656,59.625 C-9.65999984741211,59.625 -0.7099999785423279,50.67499923706055 -0.7099999785423279,39.625 C-0.7099999785423279,39.625 -0.7099999785423279,-39.625 -0.7099999785423279,-39.625 C-0.7099999785423279,-50.67499923706055 8.25,-59.625 19.290000915527344,-59.625 C19.290000915527344,-59.625 365.1940002441406,-59.625 475.87298583984375,-59.625"></path>
+        </g>
+      </g>
+      <g transform="matrix(1,0,0,1,630,137)" opacity="1" style="display: block;">
+        <g opacity="1" transform="matrix(2,0,0,2,0,0)">
+          <path class="test test--4" stroke-linecap="round" stroke-linejoin="round" fill-opacity="0" stroke="rgb(190,124,122)" stroke-opacity="1" stroke-width="10" d=" M-396,21.5 C-396,21.5 -242.02000427246094,21.280000686645508 -242.02000427246094,21.280000686645508 C-242.00999450683594,21.280000686645508 -242,21.280000686645508 -241.97999572753906,21.280000686645508 C-241.97999572753906,21.280000686645508 96.33999633789062,21.280000686645508 96.33999633789062,21.280000686645508 C107.38999938964844,21.280000686645508 116.33999633789062,12.319999694824219 116.33999633789062,1.2799999713897705 C116.33999633789062,1.2799999713897705 116.33999633789062,-1.5 116.33999633789062,-1.5 C116.33999633789062,-12.550000190734863 125.30000305175781,-21.5 136.33999633789062,-21.5 C136.33999633789062,-21.5 343.75,-21.5 387.8280029296875,-21.5"></path>
+        </g>
+      </g>
+      <g transform="matrix(1,0,0,1,661,355)" opacity="1" style="display: block;">
+        <g opacity="1" transform="matrix(2,0,0,2,0,0)">
+          <path class="test test--5" stroke-linecap="round" stroke-linejoin="round" fill-opacity="0" stroke="rgb(249,121,56)" stroke-opacity="1" stroke-width="10" d=" M-380.5,-22.5 C-380.5,-22.5 -257.5,-22.5 -257.5,-22.5 C-257.5,-22.5 80.83999633789062,-22.5 80.83999633789062,-22.5 C91.88999938964844,-22.5 100.83999633789062,-13.550000190734863 100.83999633789062,-2.5 C100.83999633789062,-2.5 100.83999633789062,2.5 100.83999633789062,2.5 C100.83999633789062,13.550000190734863 109.80000305175781,22.5 120.83999633789062,22.5 C120.83999633789062,22.5 380.5,22.5 380.5,22.5"></path>
+        </g>
+      </g>
+      <g transform="matrix(1,0,0,1,854,335.2309875488281)" opacity="1" style="display: block;">
+        <g opacity="1" transform="matrix(2,0,0,2,0,0)">
+          <path class="test test--6" stroke-linecap="round" stroke-linejoin="round" fill-opacity="0" stroke="rgb(168,223,223)" stroke-opacity="1" stroke-width="10" d=" M-410,7.385000228881836 C-410,7.385000228881836 -354.1600036621094,7.385000228881836 -354.1600036621094,7.385000228881836 C-354.1600036621094,7.385000228881836 -202.75999450683594,7.385000228881836 -202.75999450683594,7.385000228881836 C-195.7899932861328,7.385000228881836 -190.13999938964844,13.03499984741211 -190.13999938964844,20.0049991607666 C-190.13999938964844,26.96500015258789 -184.49000549316406,32.6150016784668 -177.52999877929688,32.6150016784668 C-177.52999877929688,32.6150016784668 -68.87999725341797,32.6150016784668 -68.87999725341797,32.6150016784668 C-57.83000183105469,32.6150016784668 -48.880001068115234,23.665000915527344 -48.880001068115234,12.614999771118164 C-48.880001068115234,12.614999771118164 -48.880001068115234,-12.614999771118164 -48.880001068115234,-12.614999771118164 C-48.880001068115234,-23.665000915527344 -39.91999816894531,-32.6150016784668 -28.8799991607666,-32.6150016784668 C-28.8799991607666,-32.6150016784668 339.1960144042969,-32.6150016784668 401.18701171875,-32.6150016784668"></path>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
+        </div>
+        <div class="top-inner">
+          <div class="container container--small">
+            <h1 class="title title--simple-white">דרושים</h1>
+          </div>
+        </div>
+      </section>
+      <section class="section--inner-news">
+        <div class="container container--small">
+          <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <ol>
+              <li><a class="breadcrumbs__link" href="#" tabindex="0" aria-label="דף הבית"><span class="breadcrumbs__link-text">דף הבית</span>
+                  <div class="breadcrumbs__link-arrow"><img src="content/images/icons/arrow-mini.svg"></div></a></li>
+              <li><a class="breadcrumbs__link" href="#" tabindex="0" aria-label="דרושים"><span class="breadcrumbs__link-text">דרושים</span>
+                  <div class="breadcrumbs__link-arrow"><img src="content/images/icons/arrow-mini.svg"></div></a></li>
+              <li><a class="breadcrumbs__link"><span class="breadcrumbs__link-text">לחברת קווים דרוש/ה מפקח/ת מוסכים - כולל רכב!</span></a></li>
+            </ol>
+          </nav>
+          <div class="news-block">
+            <sidebar class="sidebar-news" tabindex="-1">
+              <ul class="sidebar-news__list-second">
+                <li class="sidebar-news__list-li"><a class="link link--bigger-blue" href="#" tabindex="0" aria-label="שירות לקוחות">
+                    <div class="link__text">שירות לקוחות</div></a></li>
+                <li class="sidebar-news__list-li"><a class="link link--bigger-blue" href="#" tabindex="0" aria-label="תעריפים וכרטיסים">
+                    <div class="link__text">תעריפים וכרטיסים</div></a></li>
+                <li class="sidebar-news__list-li"><a class="link link--bigger-blue" href="#" tabindex="0" aria-label="טעינת רב קו">
+                    <div class="link__text">טעינת רב קו</div></a></li>
+                <li class="sidebar-news__list-li"><a class="link link--bigger-blue" href="#" tabindex="0" aria-label="אבידות ומציאות">
+                    <div class="link__text">אבידות ומציאות</div></a></li>
+              </ul>
+            </sidebar>
+            <div class="news-block__content">
+              <div class="news-inner">
+                <div class="news-inner__title">
+                  <h2 class="title title--border-middle title" style="border-color: #99cc2b">לחברת קווים דרוש/ה מפקח/ת מוסכים - כולל רכב!</h2>
+                </div>
+                <div class="redactor-block">
+                  <h5>תאור המשרה</h5>
+                  <p style="font-family: 'Arial'">
+                    לחברת קווים תחבורה ציבורית דרוש/ה מפקח מוסכים
+                    במסגרת התפקיד:
+                    -סקרה על תיקונים גדולים ותיקוני תאונות
+                    -בקרה על ספקי משנה בתחום אחזקת אוטוסוזים, פחחות ,זגגות וכו'
+                    -בקרה על הצעות מחיר
+                    -בחינה והצעת חלופות לתיקון
+                    -בקרה על מוסכי חוץ שאנו עובדים מולם
+                    -איתור ובקרה אחר ליקויים ברכבים הנמצאים במוסכים
+                  </p>
+                  <h5>דרישות המשרה</h5>
+                  <p style="font-family: 'Arial'">שנתיים ניסיון בתחום המכונאות\ שמאות\ קצין בטיחות<br>מכונאי סוג 3- יתרון משמעותי!<br>רישיון אוטובוס D- יתרון משמעותי!<br>אוריינטציה טכנולוגית- חובה!<br>יחסי אנוש, אסרטיביות ולויאליות<br>*העבודה עם רכב חברה צמוד*</p>
+                </div><a class="button button--most-big" href="#">
+                  <div class="button__text">הגשת מועמדות</div></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__body">
+          <div class="footer__right">
+            <div class="footer__top"><a class="button button--green-small" href="#" tabindex="0" aria-label="פנו אלינו">
+                <div class="buton__text">פנו אלינו</div></a>
+              <ul class="footer__menu" role="list">
+                <li class="footer__menu-li" role="listitem"><a class="link link--blue-simple" href="#" tabindex="0" aria-label="דף הבית">
+                    <div class="link__text">דף הבית</div></a></li>
+                <li class="footer__menu-li" role="listitem"><a class="link link--blue-simple" href="#" tabindex="0" aria-label="אודות">
+                    <div class="link__text">אודות</div></a></li>
+                <li class="footer__menu-li" role="listitem"><a class="link link--blue-simple" href="#" tabindex="0" aria-label="תעריפים וכרטיסים">
+                    <div class="link__text">תעריפים וכרטיסים</div></a></li>
+                <li class="footer__menu-li" role="listitem"><a class="link link--blue-simple" href="#" tabindex="0" aria-label="שירות לקוחות">
+                    <div class="link__text">שירות לקוחות</div></a></li>
+                <li class="footer__menu-li" role="listitem"><a class="link link--blue-simple" href="#" tabindex="0" aria-label="תנאי שימוש">
+                    <div class="link__text">תנאי שימוש</div></a></li>
+                <li class="footer__menu-li" role="listitem"><a class="link link--blue-simple" href="#" tabindex="0" aria-label="מדיניות פרטיות">
+                    <div class="link__text">מדיניות פרטיות</div></a></li>
+                <li class="footer__menu-li" role="listitem"><a class="link link--blue-simple" href="#" tabindex="0" aria-label="צור קשר">
+                    <div class="link__text">צור קשר</div></a></li>
+              </ul>
+            </div>
+            <div class="footer__logos"><a class="footer-logo" href="#" tabindex="0" aria-label="footer-logo1"><img class="lazy" src="content/images/empty.gif" data-src="content/images/pics/footer-logo1.png" width="105" height="110" alt="image-footer"></a><a class="footer-logo" href="#" tabindex="0" aria-label="footer-logo1"><img class="lazy" src="content/images/empty.gif" data-src="content/images/pics/footer-logo2.png" width="105" height="110" alt="image-footer"></a></div>
+          </div>
+          <div class="footer__created"><span>Created by</span><a href="#" tabindex="0" aria-label="Cyberserve">Cyberserve</a></div>
+        </div>
+      </div>
+    </footer>
+    <div hidden>
+      <div class="popup popup--review" id="add-review">
+        <div class="popup__close js-close-magnific">
+          <svg width="449" height="449" viewBox="0 0 449 449" xmlns="http://www.w3.org/2000/svg">
+            <path d="M86.112 400.416C125.366 431.424 173.977 448.2 224 448C281.827 448.131 337.438 425.765 379.072 385.632C400.95 364.795 418.347 339.714 430.199 311.922C442.051 284.13 448.108 254.213 448 224C448 100.48 347.52 0 224 0C100.48 0 0 100.48 0 224C0 293.44 31.408 357.76 86.112 400.416ZM224 32C329.872 32 416 118.128 416 224C416.093 249.9 410.901 275.547 400.741 299.372C390.581 323.196 375.667 344.698 356.912 362.56C321.226 396.953 273.562 416.117 224 416C180.64 416 139.792 401.92 105.84 375.232C82.7751 357.36 64.1225 334.43 51.3202 308.209C38.518 281.989 31.908 253.179 32 224C32 118.128 118.128 32 224 32Z"></path>
+            <path d="M133.488 314.512C134.97 316.003 136.733 317.186 138.674 317.994C140.616 318.801 142.697 319.217 144.8 319.217C146.903 319.217 148.984 318.801 150.926 317.994C152.867 317.186 154.63 316.003 156.112 314.512L224 246.624L291.888 314.512C293.37 316.003 295.133 317.186 297.074 317.994C299.016 318.801 301.097 319.217 303.2 319.217C305.303 319.217 307.384 318.801 309.326 317.994C311.267 317.186 313.03 316.003 314.512 314.512C317.512 311.512 319.197 307.443 319.197 303.2C319.197 298.957 317.512 294.888 314.512 291.888L246.624 224L314.512 156.112C316.04 154.636 317.259 152.871 318.098 150.918C318.936 148.966 319.378 146.867 319.396 144.742C319.414 142.618 319.01 140.511 318.205 138.545C317.401 136.578 316.213 134.792 314.71 133.29C313.208 131.787 311.422 130.599 309.455 129.795C307.489 128.99 305.382 128.586 303.258 128.604C301.133 128.622 299.034 129.064 297.082 129.902C295.129 130.741 293.364 131.96 291.888 133.488L224 201.376L156.112 133.488C154.636 131.96 152.871 130.741 150.918 129.902C148.966 129.064 146.867 128.622 144.742 128.604C142.618 128.586 140.511 128.99 138.545 129.795C136.578 130.599 134.792 131.787 133.29 133.29C131.787 134.792 130.599 136.578 129.795 138.545C128.99 140.511 128.586 142.618 128.604 144.742C128.622 146.867 129.064 148.966 129.902 150.918C130.741 152.871 131.96 154.636 133.488 156.112L201.376 224L133.488 291.888C130.488 294.888 128.803 298.957 128.803 303.2C128.803 307.443 130.488 311.512 133.488 314.512Z"></path>
+          </svg>
+        </div>
+        <div class="popup__body">
+          <div class="popup__title">Оставьте отзыв о товаре</div>
+        </div>
+      </div>
+    </div>
+    <script src="scripts/modules/jquery.min.js"></script>
+    <script type="text/javascript" src="scripts/modules/lozad.min.js"></script>
+    <script src="scripts/modules/swiper.min.js"></script>
+    <script type="text/javascript" src="scripts/modules/magnific.js"></script>
+    <script src="scripts/modules/jquery-inview.js"></script>
+    <script src="scripts/modules/menu.js"></script>
+    <script src="scripts/modules/accessibility.js"></script>
+    <script src="scripts/common.js"></script>
+  <script type="text/javascript" src="main.js"></script></body>
+</html>
